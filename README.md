@@ -9,7 +9,7 @@
 
 ### Beat your own high score, or compete with a friend locally.
 
-### [Game on itch.io](https://duendue.itch.io/sands-of-time)
+### Play and download the [Game on itch.io](https://duendue.itch.io/sands-of-time)
 
 ![alt text](https://img.itch.zone/aW1hZ2UvMTAzMzQxNC81OTA5NTg2LnBuZw==/original/Ht7nCR.png) 
 
@@ -21,8 +21,8 @@ Made with free music from [Nicole Marie T](https://nicolemariet.itch.io/spy-8-bi
 
 
 Created by:
-- [Marcus](https://github.com/duendue)
 - [Emil](https://github.com/emillh)
+- [Marcus](https://github.com/duendue)
 - [Magnus](https://github.com/MagnusJMJ)
 - [Alek](https://github.com/LaDane)
 
