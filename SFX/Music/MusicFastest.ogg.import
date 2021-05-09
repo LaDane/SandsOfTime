@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/MusicFastest.ogg-2490dccf10bb76bfef77f5b47c134ec1.oggstr"
+
+[deps]
+
+source_file="res://SFX/Music/MusicFastest.ogg"
+dest_files=[ "res://.import/MusicFastest.ogg-2490dccf10bb76bfef77f5b47c134ec1.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

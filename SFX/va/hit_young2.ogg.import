@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/hit_young2.ogg-751cd87b8771a1dcd87fe96e21d3b439.oggstr"
+
+[deps]
+
+source_file="res://SFX/va/hit_young2.ogg"
+dest_files=[ "res://.import/hit_young2.ogg-751cd87b8771a1dcd87fe96e21d3b439.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

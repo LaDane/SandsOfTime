@@ -1,0 +1,204 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Scenes/Characters/Player/Player1.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Projectiles/ProjectileSpawner.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/CameraController.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Platforms/PlatformSpawner.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/Levels/LevelTemplate.gd" type="Script" id=5]
+[ext_resource path="res://Scenes/Levels/TileSprites/GlassTiles/GlassFloor.png" type="Texture" id=6]
+[ext_resource path="res://SFX/Music/MusicComplete.ogg" type="AudioStream" id=7]
+[ext_resource path="res://SFX/Music/MusicFastest.ogg" type="AudioStream" id=8]
+[ext_resource path="res://UI/Fonts/mama-bear/Mama Bear Incease/Mama Bear Incease.otf" type="DynamicFontData" id=9]
+[ext_resource path="res://UI/gameplay_theme.tres" type="Theme" id=15]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 1000, 10 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 18
+font_data = ExtResource( 9 )
+
+[node name="LevelTemplate" type="Node2D"]
+position = Vector2( 0, -1206.41 )
+script = ExtResource( 5 )
+
+[node name="Camera2D" parent="." instance=ExtResource( 3 )]
+position = Vector2( 512, 608 )
+speed = 2.0
+
+[node name="Player1" parent="." instance=ExtResource( 1 )]
+position = Vector2( 544, 576 )
+
+[node name="Player2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 439.075, 576 )
+is_player_2 = true
+is_male = false
+
+[node name="Environment" type="Node" parent="."]
+
+[node name="Floor" type="StaticBody2D" parent="Environment"]
+position = Vector2( 512, -534.406 )
+collision_layer = 32
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Floor"]
+shape = SubResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="Environment/Floor"]
+visible = false
+margin_left = -1000.0
+margin_top = -10.0
+margin_right = 1000.0
+margin_bottom = 10.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Environment/Floor"]
+margin_left = -478.0
+margin_top = -10.0
+margin_right = 482.0
+margin_bottom = 30.0
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RightWall" type="StaticBody2D" parent="Environment"]
+position = Vector2( 672, -19986.1 )
+rotation = 1.55334
+scale = Vector2( 20, 1 )
+z_index = 3
+collision_layer = 32
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/RightWall"]
+shape = SubResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="Environment/RightWall"]
+margin_left = -1000.0
+margin_top = -10.0
+margin_right = 1000.0
+margin_bottom = 10.0
+color = Color( 0.419608, 0.560784, 0.635294, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LeftWall" type="StaticBody2D" parent="Environment"]
+position = Vector2( 352, -19954.1 )
+rotation = -1.55334
+scale = Vector2( 20, 1 )
+z_index = 3
+collision_layer = 32
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/LeftWall"]
+shape = SubResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="Environment/LeftWall"]
+margin_left = -1000.0
+margin_top = -10.0
+margin_right = 1000.0
+margin_bottom = 10.0
+color = Color( 0.419608, 0.560784, 0.635294, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Platforms" type="Node" parent="Environment"]
+script = ExtResource( 4 )
+
+[node name="Projectiles" type="Node" parent="Environment"]
+script = ExtResource( 2 )
+
+[node name="Node2D" type="Node2D" parent="Environment"]
+position = Vector2( 0, -1206.41 )
+z_index = 3
+
+[node name="OffScreenLeft" type="ColorRect" parent="Environment/Node2D"]
+anchor_left = 0.300412
+anchor_top = -28.3287
+anchor_right = 0.300412
+anchor_bottom = -28.3287
+margin_left = -527.085
+margin_top = -26266.4
+margin_right = 472.915
+margin_bottom = -16266.4
+rect_rotation = 1.0
+rect_scale = Vector2( 1, 5 )
+color = Color( 0.227451, 0.235294, 0.301961, 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="OffScreenLeft2" type="ColorRect" parent="Environment/Node2D"]
+anchor_left = -0.204568
+anchor_top = -22.5259
+anchor_right = -0.204568
+anchor_bottom = -22.5259
+margin_left = 434.56
+margin_top = -33063.1
+margin_right = 1434.56
+margin_bottom = -23063.1
+rect_rotation = -1.0
+rect_scale = Vector2( 1, 5 )
+rect_pivot_offset = Vector2( -14067.5, 792.922 )
+color = Color( 0.227451, 0.235294, 0.301961, 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Objects" type="Node" parent="."]
+
+[node name="NPCs" type="Node" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -400.0
+margin_top = 50.0
+margin_bottom = 100.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AgeLabel" type="Label" parent="CanvasLayer/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 15 )
+text = "Age: 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HighScoreLabel" type="Label" parent="CanvasLayer/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1.11432
+margin_top = 37.078
+margin_right = 1.11432
+margin_bottom = 37.078
+theme = ExtResource( 15 )
+custom_fonts/font = SubResource( 2 )
+text = "High score: 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+volume_db = -25.0
+autoplay = true
+bus = "Music_Levels"
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+volume_db = -25.0
+bus = "Music_Levels"
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_finished"]

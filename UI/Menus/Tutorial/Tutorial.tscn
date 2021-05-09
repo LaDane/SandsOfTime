@@ -1,0 +1,132 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://UI/gameplay_theme.tres" type="Theme" id=1]
+[ext_resource path="res://UI/Menus/Tutorial/You.tscn" type="PackedScene" id=2]
+[ext_resource path="res://UI/Menus/Tutorial/Tile.tscn" type="PackedScene" id=3]
+[ext_resource path="res://UI/Menus/Tutorial/Projectile.tscn" type="PackedScene" id=4]
+[ext_resource path="res://UI/Buttons/BackToMenu.tscn" type="PackedScene" id=5]
+[ext_resource path="res://UI/Buttons/PlayGame.tscn" type="PackedScene" id=6]
+[ext_resource path="res://UI/Menus/Tutorial/Tutorial.gd" type="Script" id=7]
+[ext_resource path="res://UI/ParallaxBackground.tscn" type="PackedScene" id=8]
+
+[node name="Tutorial" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/separation = 40
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 62.0
+margin_right = 1024.0
+margin_bottom = 92.0
+custom_constants/separation = 75
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+margin_left = 74.0
+margin_right = 287.0
+margin_bottom = 30.0
+theme = ExtResource( 1 )
+text = "This is you!"
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer"]
+margin_left = 362.0
+margin_right = 640.0
+margin_bottom = 30.0
+theme = ExtResource( 1 )
+text = "Jump on these!"
+
+[node name="Label3" type="Label" parent="VBoxContainer/HBoxContainer"]
+margin_left = 715.0
+margin_right = 950.0
+margin_bottom = 30.0
+size_flags_vertical = 2
+theme = ExtResource( 1 )
+text = "Avoid these!"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 132.0
+margin_right = 1024.0
+margin_bottom = 332.0
+custom_constants/separation = 130
+alignment = 1
+
+[node name="You" parent="VBoxContainer/HBoxContainer2" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 82.0
+margin_right = 282.0
+margin_bottom = 200.0
+
+[node name="Tile" parent="VBoxContainer/HBoxContainer2" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 412.0
+margin_right = 612.0
+margin_bottom = 200.0
+
+[node name="Projectile" parent="VBoxContainer/HBoxContainer2" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 742.0
+margin_right = 942.0
+margin_bottom = 200.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+margin_top = 372.0
+margin_right = 1024.0
+margin_bottom = 457.0
+custom_constants/separation = 25
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/VBoxContainer"]
+margin_right = 1024.0
+margin_bottom = 30.0
+theme = ExtResource( 1 )
+text = "Press \"a\" + \"D\" to move, and \"W\" to jump"
+align = 1
+
+[node name="Label2" type="Label" parent="VBoxContainer/VBoxContainer"]
+margin_top = 55.0
+margin_right = 1024.0
+margin_bottom = 85.0
+theme = ExtResource( 1 )
+text = "Time is running out... death is pending"
+align = 1
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 497.0
+margin_right = 1024.0
+margin_bottom = 537.0
+custom_constants/separation = 70
+alignment = 1
+
+[node name="BackToMenu" parent="VBoxContainer/HBoxContainer3" instance=ExtResource( 5 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 327.0
+margin_right = 495.0
+margin_bottom = 40.0
+
+[node name="PlayGame" parent="VBoxContainer/HBoxContainer3" instance=ExtResource( 6 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 565.0
+margin_top = 0.0
+margin_right = 696.0
+margin_bottom = 40.0
+
+[node name="ParallaxBackground" parent="." instance=ExtResource( 8 )]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer3/BackToMenu" to="." method="_on_BackToMenu_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer3/PlayGame" to="." method="_on_PlayGame_pressed"]

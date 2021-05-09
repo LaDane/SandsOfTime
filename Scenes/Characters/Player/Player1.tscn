@@ -1,0 +1,206 @@
+[gd_scene load_steps=34 format=2]
+
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_feet_running2.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/Characters/Player/Player.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_Body5.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_feet_running3.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_Body7.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_Body3.png" type="Texture" id=6]
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_Body6.png" type="Texture" id=7]
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_Body8.png" type="Texture" id=8]
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_Body2.png" type="Texture" id=9]
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_Body4.png" type="Texture" id=10]
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_Body9.png" type="Texture" id=11]
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_feet_running1.png" type="Texture" id=12]
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_feet_running4.png" type="Texture" id=13]
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_Body1.png" type="Texture" id=14]
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_Female5.png" type="Texture" id=15]
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_Female6.png" type="Texture" id=16]
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_Female1.png" type="Texture" id=17]
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_Female3.png" type="Texture" id=18]
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_Female9.png" type="Texture" id=19]
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_Female2.png" type="Texture" id=20]
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_Female4.png" type="Texture" id=21]
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_Female7.png" type="Texture" id=22]
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_Female8.png" type="Texture" id=23]
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_female_feet2.png" type="Texture" id=24]
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_female_feet3.png" type="Texture" id=25]
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_female_feet4.png" type="Texture" id=26]
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_female_feet1.png" type="Texture" id=27]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 11 ) ],
+"loop": true,
+"name": "Age8",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "Age2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "Age5",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "Age7",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "Age4",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ) ],
+"loop": true,
+"name": "Age3",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "Age1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "Age6",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "Age0",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 12 ), ExtResource( 1 ), ExtResource( 4 ), ExtResource( 1 ), ExtResource( 12 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "Run",
+"speed": 25.0
+}, {
+"frames": [ ExtResource( 12 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 19 ) ],
+"loop": false,
+"name": "Age8",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 18 ) ],
+"loop": false,
+"name": "Age2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 16 ) ],
+"loop": false,
+"name": "Age5",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 23 ) ],
+"loop": false,
+"name": "Age7",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 15 ) ],
+"loop": false,
+"name": "Age4",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 21 ) ],
+"loop": false,
+"name": "Age3",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 20 ) ],
+"loop": false,
+"name": "Age1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 22 ) ],
+"loop": true,
+"name": "Age6",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 17 ) ],
+"loop": false,
+"name": "Age0",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 27 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 24 ), ExtResource( 27 ), ExtResource( 26 ) ],
+"loop": true,
+"name": "Run",
+"speed": 25.0
+}, {
+"frames": [ ExtResource( 27 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 28.1882, 18.8956 )
+
+[sub_resource type="Animation" id=6]
+length = 0.4
+step = 0.05
+
+[node name="Player" type="KinematicBody2D"]
+collision_layer = 2147483650
+collision_mask = 28
+script = ExtResource( 2 )
+
+[node name="AnimatedSprite_Age_Male" type="AnimatedSprite" parent="."]
+scale = Vector2( 4, 4 )
+frames = SubResource( 1 )
+animation = "Age2"
+playing = true
+
+[node name="AnimatedSprite_Run_Male" type="AnimatedSprite" parent="."]
+scale = Vector2( 4, 4 )
+frames = SubResource( 2 )
+animation = "Run"
+frame = 2
+
+[node name="AnimatedSprite_Age_Female" type="AnimatedSprite" parent="."]
+visible = false
+scale = Vector2( 4, 4 )
+z_index = 1
+frames = SubResource( 3 )
+animation = "Age6"
+
+[node name="AnimatedSprite_Run_Female" type="AnimatedSprite" parent="."]
+visible = false
+scale = Vector2( 4, 4 )
+frames = SubResource( 4 )
+animation = "Run"
+frame = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( -0.222733, 3.78632 )
+rotation = 1.5708
+shape = SubResource( 5 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 1.5
+autostart = true
+
+[node name="va_player" type="AudioStreamPlayer" parent="."]
+bus = "SFX_Levels"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/HurtAnimation = SubResource( 6 )
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

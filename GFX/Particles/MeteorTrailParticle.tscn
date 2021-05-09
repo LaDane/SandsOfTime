@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://GFX/Particles/ParticleHandler.gd" type="Script" id=1]
+
+[sub_resource type="Curve" id=1]
+_data = [ Vector2( 0.00869565, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.995652, 0 ), -1.22395, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=2]
+curve = SubResource( 1 )
+
+[sub_resource type="ParticlesMaterial" id=3]
+emission_shape = 2
+emission_box_extents = Vector3( 2, 2, 1 )
+flag_disable_z = true
+direction = Vector3( -200, 0, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 70.0
+initial_velocity_random = 0.77
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 32.52
+angle = 1.0
+scale = 1.5
+scale_curve = SubResource( 2 )
+color = Color( 0.980392, 0.898039, 0.713726, 0.219608 )
+
+[node name="ParticleConfetti" type="Particles2D"]
+scale = Vector2( 4, 4 )
+emitting = false
+amount = 3
+lifetime = 0.6
+one_shot = true
+explosiveness = 0.31
+randomness = 0.23
+process_material = SubResource( 3 )
+script = ExtResource( 1 )

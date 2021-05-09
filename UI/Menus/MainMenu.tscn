@@ -1,0 +1,101 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://UI/Buttons/Tutorial.tscn" type="PackedScene" id=1]
+[ext_resource path="res://UI/Buttons/Credits.tscn" type="PackedScene" id=2]
+[ext_resource path="res://UI/Buttons/PlayGame.tscn" type="PackedScene" id=3]
+[ext_resource path="res://UI/gameplay_theme.tres" type="Theme" id=4]
+[ext_resource path="res://UI/Buttons/Exit.tscn" type="PackedScene" id=5]
+[ext_resource path="res://UI/MenuGlass.tscn" type="PackedScene" id=6]
+[ext_resource path="res://UI/Menus/MainMenu.gd" type="Script" id=7]
+[ext_resource path="res://UI/ParallaxBackground.tscn" type="PackedScene" id=8]
+
+[node name="MainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -20.0
+margin_right = 20.0
+margin_bottom = 20.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MenuGlass" parent="CenterContainer" instance=ExtResource( 6 )]
+modulate = Color( 0.858824, 0.780392, 0.780392, 1 )
+position = Vector2( 20, 20 )
+scale = Vector2( 8, 8 )
+z_index = -1
+frame = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/separation = 10
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayGame" parent="VBoxContainer" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 180.0
+margin_right = 1024.0
+margin_bottom = 220.0
+
+[node name="Tutorial" parent="VBoxContainer" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 230.0
+margin_right = 1024.0
+margin_bottom = 270.0
+
+[node name="Options" type="Button" parent="VBoxContainer"]
+margin_top = 280.0
+margin_right = 1024.0
+margin_bottom = 320.0
+theme = ExtResource( 4 )
+text = "Options"
+
+[node name="Credits" parent="VBoxContainer" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 330.0
+margin_right = 1024.0
+margin_bottom = 370.0
+
+[node name="Exit" parent="VBoxContainer" instance=ExtResource( 5 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 380.0
+margin_right = 1024.0
+margin_bottom = 420.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ParallaxBackground2" parent="." instance=ExtResource( 8 )]
+[connection signal="pressed" from="VBoxContainer/PlayGame" to="." method="_on_PlayGame_pressed"]
+[connection signal="pressed" from="VBoxContainer/Tutorial" to="." method="_on_Tutorial_pressed"]
+[connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_Options_pressed"]
+[connection signal="pressed" from="VBoxContainer/Credits" to="." method="_on_Credits_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_Exit_pressed"]

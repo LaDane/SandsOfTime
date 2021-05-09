@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/MusicLobby.ogg-b744c9140c2fb0ad84e311649771984b.oggstr"
+
+[deps]
+
+source_file="res://SFX/Music/MusicLobby.ogg"
+dest_files=[ "res://.import/MusicLobby.ogg-b744c9140c2fb0ad84e311649771984b.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

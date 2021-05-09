@@ -1,0 +1,58 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_test_aging7.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_test_aging2.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_test_aging3.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_test_aging8.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_test_aging9.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_test_aging1.png" type="Texture" id=6]
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_test_aging6.png" type="Texture" id=7]
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_test_aging5.png" type="Texture" id=8]
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_test_aging4.png" type="Texture" id=9]
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_Female_wholebody3.png" type="Texture" id=10]
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_Female_wholebody2.png" type="Texture" id=11]
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_Female_wholebody6.png" type="Texture" id=12]
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_Female_wholebody9.png" type="Texture" id=13]
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_Female_wholebody5.png" type="Texture" id=14]
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_Female_wholebody1.png" type="Texture" id=15]
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_Female_wholebody7.png" type="Texture" id=16]
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_Female_wholebody4.png" type="Texture" id=17]
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_Female_wholebody8.png" type="Texture" id=18]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 6 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 1 ), ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "Age",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 15 ), ExtResource( 11 ), ExtResource( 10 ), ExtResource( 17 ), ExtResource( 14 ), ExtResource( 12 ), ExtResource( 16 ), ExtResource( 18 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "Age",
+"speed": 5.0
+} ]
+
+[node name="CharacterDeadAs" type="CenterContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 0
+use_top_left = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite_Male" type="AnimatedSprite" parent="."]
+position = Vector2( 200, 200 )
+scale = Vector2( 8, 8 )
+frames = SubResource( 1 )
+animation = "Age"
+
+[node name="AnimatedSprite_Female" type="AnimatedSprite" parent="."]
+position = Vector2( 200, 200 )
+scale = Vector2( 8, 8 )
+frames = SubResource( 2 )
+animation = "Age"

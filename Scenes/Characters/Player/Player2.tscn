@@ -1,0 +1,155 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_feet_running2.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/Characters/Player/Player.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_Body5.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_feet_running3.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_Body7.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_Body3.png" type="Texture" id=6]
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_Body6.png" type="Texture" id=7]
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_Body8.png" type="Texture" id=8]
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_Body2.png" type="Texture" id=9]
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_Body4.png" type="Texture" id=10]
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_Body9.png" type="Texture" id=11]
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_feet_running1.png" type="Texture" id=12]
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_feet_running4.png" type="Texture" id=13]
+[ext_resource path="res://Scenes/Characters/Player/PlayerSprites/AgingSprites/PC_Body1.png" type="Texture" id=14]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 11 ) ],
+"loop": false,
+"name": "Age8",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": false,
+"name": "Age7",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": false,
+"name": "Age2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "Age6",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ) ],
+"loop": false,
+"name": "Age0",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": false,
+"name": "Age5",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": false,
+"name": "Age4",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ) ],
+"loop": false,
+"name": "Age3",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ) ],
+"loop": false,
+"name": "Age1",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 12 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 1 ), ExtResource( 4 ), ExtResource( 1 ), ExtResource( 12 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "Run",
+"speed": 25.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 28.1882, 18.8956 )
+
+[sub_resource type="Animation" id=4]
+resource_name = "HurtAnimation"
+length = 0.4
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite_Age_Male:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.0630402, 0.129992, 0.193033, 0.259985, 0.324329, 0.386065 ),
+"transitions": PoolRealArray( -2, -2, -2, -2, -2, -2, -2 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.992157, 0.596078, 0.596078, 1 ), Color( 1, 1, 1, 1 ), Color( 0.992157, 0.596078, 0.596078, 1 ), Color( 1, 1, 1, 1 ), Color( 0.992157, 0.596078, 0.596078, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimatedSprite_Run_Male:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.0630402, 0.129992, 0.193033, 0.259985, 0.324329, 0.386065 ),
+"transitions": PoolRealArray( -2, -2, -2, -2, -2, -2, -2 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.992157, 0.596078, 0.596078, 1 ), Color( 1, 1, 1, 1 ), Color( 0.992157, 0.596078, 0.596078, 1 ), Color( 1, 1, 1, 1 ), Color( 0.992157, 0.596078, 0.596078, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="Player" type="KinematicBody2D"]
+collision_layer = 2147483650
+collision_mask = 28
+script = ExtResource( 2 )
+
+[node name="AnimatedSprite_Age_Male" type="AnimatedSprite" parent="."]
+scale = Vector2( 4, 4 )
+z_index = 1
+frames = SubResource( 1 )
+animation = "Age6"
+
+[node name="AnimatedSprite_Run_Male" type="AnimatedSprite" parent="."]
+scale = Vector2( 4, 4 )
+frames = SubResource( 2 )
+animation = "Idle"
+playing = true
+
+[node name="AnimatedSprite_Age_Female" type="AnimatedSprite" parent="."]
+scale = Vector2( 4, 4 )
+z_index = 1
+frames = SubResource( 1 )
+animation = "Age6"
+
+[node name="AnimatedSprite_Run_Female" type="AnimatedSprite" parent="."]
+scale = Vector2( 4, 4 )
+frames = SubResource( 2 )
+animation = "Idle"
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( -0.222733, 3.78632 )
+rotation = 1.5708
+shape = SubResource( 3 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 1.5
+autostart = true
+
+[node name="va_player" type="AudioStreamPlayer" parent="."]
+bus = "SFX_Levels"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/HurtAnimation = SubResource( 4 )
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

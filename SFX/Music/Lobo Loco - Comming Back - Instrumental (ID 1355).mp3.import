@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Lobo Loco - Comming Back - Instrumental (ID 1355).mp3-108a8c87043297c549a23f04662ff248.mp3str"
+
+[deps]
+
+source_file="res://SFX/Music/Lobo Loco - Comming Back - Instrumental (ID 1355).mp3"
+dest_files=[ "res://.import/Lobo Loco - Comming Back - Instrumental (ID 1355).mp3-108a8c87043297c549a23f04662ff248.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
