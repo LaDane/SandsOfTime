@@ -21,13 +21,10 @@ Made with free music from [Nicole Marie T](https://nicolemariet.itch.io/spy-8-bi
 
 
 Created by:
-[Marcus](https://github.com/duendue)
-
-[Emil](https://github.com/emillh)
-
-[Magnus](https://github.com/MagnusJMJ)
-
-[Alek](https://github.com/LaDane)
+- [Marcus](https://github.com/duendue)
+- [Emil](https://github.com/emillh)
+- [Magnus](https://github.com/MagnusJMJ)
+- [Alek](https://github.com/LaDane)
 
 ![alt text](https://img.itch.zone/aW1hZ2UvMTAzMzQxNC81OTA2ODU1LnBuZw==/original/yieKHY.png) 
 ![alt text](https://img.itch.zone/aW1hZ2UvMTAzMzQxNC81OTA2ODYzLnBuZw==/original/LyQ2AS.png) 
